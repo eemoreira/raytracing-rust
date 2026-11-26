@@ -1,4 +1,5 @@
 mod hit;
+pub mod shapes;
 mod sphere;
 mod triangle;
 
