@@ -1,4 +1,4 @@
-use crate::hit::Hittable;
+use crate::geometry::Hittable;
 use crate::rand;
 use crate::{Interval, Ray, Rgb, Vec3, World};
 use std::fs::File;

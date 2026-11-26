@@ -1,7 +1,7 @@
 use crate::Hit;
 use crate::Ray;
 use crate::Vec3;
-use crate::rand;
+use crate::math::rand;
 
 pub trait Material: Send + Sync {
     fn scatter(&self, ray: &Ray, hit: &Hit) -> Option<(Vec3, Ray)>;
