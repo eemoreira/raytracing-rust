@@ -68,6 +68,9 @@ impl Triangle {
             false
         }
     }
+    pub fn normal(&self) -> Vec3 {
+        self.normal
+    }
 }
 
 impl Hittable for Triangle {

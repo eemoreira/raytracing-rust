@@ -1,6 +1,5 @@
 use raytracing::{
-    Camera, DiffuseLight, Lambertian, Material, Metal, Portal, Sphere,
-    Vec3, World, shapes,
+    Camera, DiffuseLight, Lambertian, Material, Metal, Portal, Sphere, Vec3, World, shapes,
 };
 use std::f64::consts::PI;
 use std::sync::Arc;
@@ -41,12 +40,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         portal_exit_center,
     ));
 
-    let cube = shapes::make_box(
+    let cube = shapes::Cube::new(
         Vec3::new(0.3, -0.5, -1.4),
         Vec3::new(0.8, -0.1, -0.9),
         Arc::clone(&metal_yellow),
     )?;
-    let diamond = shapes::make_diamond_cube(
+    let diamond = shapes::Diamond::new(
         Vec3::new(0.0, 0.5, -1.0),
         0.5,
         0.5,
